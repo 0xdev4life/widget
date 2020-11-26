@@ -1,0 +1,9 @@
+mat-card {
+  cursor: pointer !important;
+
+  height: 150px !important;
+}
+
+.card-holder :hover {
+  background-color: whitesmoke !important;
+}

@@ -1,0 +1,53 @@
+<div class="content"
+     fxLayout="row" fxLayoutAlign="center center"
+     fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="start center">
+
+  <mat-card class="mat-elevation-z3"
+            fxLayout="column" fxLayoutAlign="center center">
+    <div class="card-row header">
+
+      Введите текст
+
+    </div>
+
+    <div class="card-row">
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Текст</mat-label>
+        <input matInput [(ngModel)]="primaryText">
+
+      </mat-form-field>
+
+    </div>
+
+    <div class="card-row">
+      <button mat-raised-button color="primary" (click)="secondaryText = primaryText">Передать</button>
+    </div>
+  </mat-card>
+
+  <mat-card class="mat-elevation-z3"
+            fxLayout="column" fxLayoutAlign="center center">
+    <div class="card-row header">
+
+      Введите текст
+
+    </div>
+
+    <div class="card-row">
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Текст</mat-label>
+        <input matInput [(ngModel)]="secondaryText">
+
+      </mat-form-field>
+
+    </div>
+
+    <div class="card-row">
+      <button mat-raised-button color="primary" (click)="primaryText = secondaryText">Передать</button>
+    </div>
+  </mat-card>
+
+</div>

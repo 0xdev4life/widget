@@ -1,0 +1,33 @@
+<div class="content" fxLayout="column" fxLayoutAlign="start center">
+
+  <div style="font-size: 1.4rem; font-weight: 300">
+
+    Выберите проект, интересующий вас
+
+  </div>
+
+  <div class="card-holder" fxLayout="row" fxLayoutAlign="center center" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="start center">
+
+    <mat-card fxLayoutAlign="center center" [routerLink]="['/todo']">
+
+      <div>
+
+        TODO-лист
+
+      </div>
+
+    </mat-card>
+
+    <mat-card fxLayoutAlign="center center" [routerLink]="['/transfer']">
+
+      <div>
+
+        Передача данных между компонентами
+
+      </div>
+
+    </mat-card>
+
+  </div>
+
+</div>
