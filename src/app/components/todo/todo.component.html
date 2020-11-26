@@ -1,1 +1,68 @@
-<p>todo works!</p>
+<div class="content"
+     fxLayout="column" fxLayoutAlign="start center">
+
+  <mat-card class="mat-elevation-z3 field">
+    <form [formGroup]="todoForm" fxLayout="column" (submit)="addTask()">
+      <div class="subheader">Введите новую задачу</div>
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Имя</mat-label>
+        <input matInput formControlName="task">
+        <mat-error *ngIf="todoForm.get('task').invalid && todoForm.get('task').touched">Поле не должно быть пустым</mat-error>
+
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="todoForm.invalid">Добавить</button>
+      </div>
+
+    </form>
+  </mat-card>
+
+  <div class="header">
+
+    {{todoList.length > 0 ? 'Текущие задачи' : 'Нет активных задач'}}
+
+  </div>
+
+  <ul *ngIf="todoList.length > 0">
+    <li *ngFor="let task of todoList">
+      <mat-card class="mat-elevation-z3 field">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <div *ngIf="!task.edit">
+            {{task.label}}
+          </div>
+          <mat-form-field appearance="standard" *ngIf="task.edit">
+
+            <mat-label>Имя</mat-label>
+            <input matInput [(ngModel)]="task.label">
+
+          </mat-form-field>
+
+          <div fxLayout="row">
+
+            <button mat-icon-button *ngIf="!task.edit" (click)="task.edit = true">
+              <mat-icon>edit</mat-icon>
+            </button>
+
+            <button mat-icon-button *ngIf="!task.edit" (click)="removeTask(task)">
+              <mat-icon>delete</mat-icon>
+            </button>
+
+            <button mat-icon-button *ngIf="task.edit" (click)="task.edit = false">
+              <mat-icon>done</mat-icon>
+            </button>
+
+          </div>
+        </div>
+      </mat-card>
+    </li>
+  </ul>
+
+
+  <button mat-icon-button class="back-button" [routerLink]="['/']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+</div>

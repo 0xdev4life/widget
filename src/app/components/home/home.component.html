@@ -1,12 +1,14 @@
 <div class="content" fxLayout="column" fxLayoutAlign="start center">
 
-  <div style="font-size: 1.4rem; font-weight: 300">
+  <div class="header">
 
     Выберите проект, интересующий вас
 
   </div>
 
-  <div class="card-holder" fxLayout="row" fxLayoutAlign="center center" fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="start center">
+  <div class="card-holder"
+       fxLayout="row" fxLayoutAlign="center center"
+       fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="start center">
 
     <mat-card fxLayoutAlign="center center" [routerLink]="['/todo']">
 

@@ -1,5 +1,5 @@
 <div class="content"
-     fxLayout="row" fxLayoutAlign="center center"
+     fxLayout="row" fxLayoutAlign="center start"
      fxLayout.lt-sm="column" fxLayoutAlign.lt-sm="start center">
 
   <mat-card class="mat-elevation-z3"
@@ -49,5 +49,9 @@
       <button mat-raised-button color="primary" (click)="primaryText = secondaryText">Передать</button>
     </div>
   </mat-card>
+
+  <button mat-icon-button class="back-button" [routerLink]="['/']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
 
 </div>

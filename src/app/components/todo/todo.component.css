@@ -1,0 +1,19 @@
+.field {
+  max-width: 500px !important;
+
+  margin: 5% 0 25px !important;
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  margin: 25px 0px;
+}
+
+.subheader {
+  font-size: 1.3rem;
+  font-weight: 300;
+
+  margin: 5% 0px;
+}
