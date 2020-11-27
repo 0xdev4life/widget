@@ -3,7 +3,7 @@
 .content {
   height: 100vh;
 
-  padding-top: 150px;
+  padding: 150px 25% 0;
 }
 
 mat-card {

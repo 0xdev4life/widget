@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Subscription} from 'rxjs';
+import {BehaviorService} from '../../tools/behavior.service';
 
 @Component({
   selector: 'app-transfer',
@@ -9,10 +11,17 @@ export class TransferComponent implements OnInit {
 
   constructor() { }
 
-  primaryText = '';
-  secondaryText = '';
+  childText = '';
+  parentText = '';
+
 
   ngOnInit(): void {
   }
 
+  emitChildPost($event: string): void {
+    this.childText = $event;
+  }
+  emitParentPost($event: string): void {
+    this.parentText = $event;
+  }
 }

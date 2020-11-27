@@ -18,14 +18,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatDividerModule} from '@angular/material/divider';
+import { CardComponent } from './components/transfer/card/card.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodoComponent,
-    TransferComponent,
-    HomeComponent,
-  ],
+    declarations: [
+        AppComponent,
+        TodoComponent,
+        TransferComponent,
+        HomeComponent,
+        CardComponent,
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
